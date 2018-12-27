@@ -69,7 +69,7 @@ void graph::dijkstra(string src , string dst){
             distances[it->first].first = 2143658710;//intialize all the distances with "infinity"
             distances[it->first].second = "None";//and still you didn't reach any of them
         }
-        distances[src].first = 0;
+        distances[src].first = 0;//distance between src and src equals 0
         set < pair < int , string > > neighbors;//carries all the neighbors of the current node
         neighbors.insert(make_pair(0,src));//first step passing throgh src
         while (!neighbors.empty()){//finish calculating the shortest path from the current node to all it's neighbors
